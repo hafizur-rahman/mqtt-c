@@ -4,7 +4,7 @@
 AC_PREREQ([2.63])
 AC_INIT([mqtt-sample], [0.1], [bibagimon@gmail.com])
 AM_INIT_AUTOMAKE
-AC_CONFIG_SRCDIR([src/main.c])
+AC_CONFIG_SRCDIR([src/mqtt-pub.c])
 AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.

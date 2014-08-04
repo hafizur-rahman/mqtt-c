@@ -3,12 +3,12 @@
 #include "string.h"
 #include "MQTTClient.h"
 
-#define ADDRESS     "tcp://localhost:61681"
+#define ADDRESS     "tcp://127.0.0.1:61613"
 #define CLIENTID    "paho-publisher"
 #define TOPIC       "lights"
 #define PAYLOAD     "on"
 #define QOS         1
-#define TIMEOUT     10000L
+#define TIMEOUT     100000L
 
 int main(int argc, char* argv[]) {
 	MQTTClient client;
@@ -17,10 +17,12 @@ int main(int argc, char* argv[]) {
 	MQTTClient_deliveryToken token;
 	int rc;
 
-	MQTTClient_create(&client, ADDRESS, CLIENTID,
-	MQTTCLIENT_PERSISTENCE_NONE, NULL);
+	MQTTClient_create(&client, ADDRESS, CLIENTID, MQTTCLIENT_PERSISTENCE_NONE,
+			NULL);
 	conn_opts.keepAliveInterval = 20;
 	conn_opts.cleansession = 1;
+	conn_opts.username = "admin";
+	conn_opts.password = "password";
 
 	if ((rc = MQTTClient_connect(client, &conn_opts)) != MQTTCLIENT_SUCCESS) {
 		printf("Failed to connect, return code %d\n", rc);
