@@ -46,3 +46,4 @@ See https://github.com/hafizur-rahman/mqtt/blob/master/README.md
 /usr/local/bin/mqtt-pub
 ```
 
+Detailed documentation regarding Paho C client library can be found at http://www.eclipse.org/paho/files/mqttdoc/Cclient/index.html
