@@ -2,12 +2,12 @@
  * callback.h
  *
  *  Created on: Aug 4, 2014
- *      Author: hafizur
+ *      Author: bibagimon@gmai.com
  */
+#include "MQTTClient.h"
 
 #ifndef CALLBACK_H_
 #define CALLBACK_H_
-#include "MQTTClient.h"
 
 volatile MQTTClient_deliveryToken deliveredtoken;
 
@@ -30,6 +30,7 @@ int msgarrvd(void *context, char *topicName, int topicLen,
 	}
 	putchar('\n');
 	MQTTClient_freeMessage(&message);
+	MQTTClient_free(topicName);
 
 	return 1;
 }
