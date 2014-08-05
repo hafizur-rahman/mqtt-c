@@ -34,14 +34,15 @@ Two binaries (mqtt-pub, mqtt-sub) will be installed at /usr/local/bin.
 ============================
 See https://github.com/hafizur-rahman/mqtt/blob/master/README.md
 
-3. Run Publisher
+3. Run Subscriber
+================
+```
+/usr/local/bin/mqtt-sub
+```
+
+4. Run Publisher
 ================
 ```
 /usr/local/bin/mqtt-pub
 ```
 
-4. Run Subscriber
-================
-```
-/usr/local/bin/mqtt-sub
-```
