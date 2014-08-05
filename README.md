@@ -19,8 +19,6 @@ For further details, please consult http://www.eclipse.org/paho/clients/c/.
 1. Build current project
 ========================
 ```
-autoconf
-./configure
 make
 ```
 
