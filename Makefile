@@ -54,4 +54,4 @@ distclean:
 	-rm $(distdir).tar.gz > /dev/null 2>&1
 	-rm -rf $(distdir) > /dev/null 2>&1
 
-.PHONY: FORCE all clean dist install uninstall
+.PHONY: distclean all clean dist install uninstall
